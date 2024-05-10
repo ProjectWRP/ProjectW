@@ -43,7 +43,7 @@ import Redes from '../components/Redes.astro';
                     const numeroPagina = document.createElement('div');
                     numeroPagina.classList.add('numero-pagina');
                     numeroPagina.classList.add('pie-pagina');
-                    numeroPagina.textContent = index + 1;
+                    numeroPagina.textContent = (index + 1).toString();
                     pagina.appendChild(numeroPagina);
                 });
             });

@@ -3,21 +3,21 @@ interface Props {
 	title: string;
 }
 
-const { title } = "Project W";
+const title = "Project W";
 ---
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Web Oficial de Project W RP" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/project-w.svg" />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Web Oficial de Project W RP" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/svg+xml" href="/project-w.svg" />
+	<title>{title}</title>
+</head>
+<body>
+<slot />
+</body>
 </html>
 <style is:global>
 	:root {

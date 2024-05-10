@@ -203,6 +203,7 @@
                 const text = 'Project';
                 const span = document.querySelector('.colorPrincipal');
                 let index = 0;
+                const logo = document.getElementById("logoProject");
 
                 function writeText() {
                         if (span) {
@@ -213,7 +214,6 @@
                                 } else if (index == text.length && logo) {
                                         setTimeout(logoW, 200)
                                         function logoW() {
-                                                const logo = document.getElementById("logoProject");
                                                 if (logo) {
                                                         logo.classList.remove('hidden');
                                                         logo.style.animation = "fadeIn 0.35s ease-in-out";
@@ -241,7 +241,8 @@
         }
 
         document.body.addEventListener('click', function(event) {
-                if (sidebar && !sidebar.contains(event.target) && menuIcon && closeIcon) {
+                const targetNode = event.target instanceof Node ? event.target : null;
+                if (sidebar && targetNode && !sidebar.contains(targetNode) && menuIcon && closeIcon) {
                         sidebar.classList.add('hidden');
                         menuIcon.classList.remove('hidden');
                         closeIcon.classList.add('hidden');
