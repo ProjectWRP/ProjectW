@@ -205,16 +205,20 @@
                 let index = 0;
 
                 function writeText() {
-                        if (index < text.length) {
-                                span.innerHTML += text[index];
-                                index++;
-                                setTimeout(writeText, 250);
-                        } else if (index == text.length){
-                                setTimeout(logoW, 200)
-                                function logoW() {
-                                        const logo = document.getElementById("logoProject");
-                                        logo.classList.remove('hidden');
-                                        logo.style.animation = "fadeIn 0.35s ease-in-out";
+                        if (span) {
+                                if (index < text.length) {
+                                        span.innerHTML += text[index];
+                                        index++;
+                                        setTimeout(writeText, 250);
+                                } else if (index == text.length && logo) {
+                                        setTimeout(logoW, 200)
+                                        function logoW() {
+                                                const logo = document.getElementById("logoProject");
+                                                if (logo) {
+                                                        logo.classList.remove('hidden');
+                                                        logo.style.animation = "fadeIn 0.35s ease-in-out";
+                                                }
+                                        }
                                 }
                         }
                 }
@@ -227,22 +231,20 @@
         const menuIcon = document.getElementById('menuIcon');
         const closeIcon = document.getElementById('closeIcon');
 
-        toggleMenu.addEventListener('click', function(event) {
-                event.stopPropagation();
-                sidebar.classList.toggle('hidden');
-                menuIcon.classList.toggle('hidden');
-                if (closeIcon) {
+        if (toggleMenu && sidebar && menuIcon && closeIcon) {
+                toggleMenu.addEventListener('click', function(event) {
+                        event.stopPropagation();
+                        sidebar.classList.toggle('hidden');
+                        menuIcon.classList.toggle('hidden');
                         closeIcon.classList.toggle('hidden');
-                }
-        });
+                });
+        }
 
         document.body.addEventListener('click', function(event) {
-                if (event.target instanceof Node && !sidebar.contains(event.target)) {
+                if (sidebar && !sidebar.contains(event.target) && menuIcon && closeIcon) {
                         sidebar.classList.add('hidden');
                         menuIcon.classList.remove('hidden');
-                        if (closeIcon) {
-                                closeIcon.classList.add('hidden');
-                        }
+                        closeIcon.classList.add('hidden');
                 }
         });
 </script>
