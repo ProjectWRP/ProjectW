@@ -1,0 +1,219 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Redes from '../components/Redes.astro';
+---
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Normativa General de Project W RolePlay" />
+        <link rel="icon" type="image/svg+xml" href="/project-w.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Normativa General</title>
+        <style>
+            p{
+                text-align: justify;
+                line-height: 2em;
+            }
+
+            ol {
+                text-align: justify;
+                line-height: 2em;
+            }
+
+            ol.list-decimal li::marker {
+                font-weight: bold;
+            }
+
+            .numero-pagina {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .espaciado {
+                display: inline-block;
+                height: 1em;
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const paginas = document.querySelectorAll('.pagina');
+                paginas.forEach((pagina, index) => {
+                    const numeroPagina = document.createElement('div');
+                    numeroPagina.classList.add('numero-pagina');
+                    numeroPagina.classList.add('pie-pagina');
+                    numeroPagina.textContent = index + 1;
+                    pagina.appendChild(numeroPagina);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <Navbar />
+        <div class="pagina">
+            <div class="text-center select-none">
+                <div class="m-auto">
+                    <h1 class="colorPrincipal tituloNormativa">NORMATIVA GENERAL</h1>
+                </div>
+            </div>
+            <p><span id="1" class="titulos">1. </span><span class="titulos">CONCEPTOS BÁSICOS</span></p>
+            <p>Crea un personaje, crea su historia y actúa como lo haría tu personaje en la vida real.</p>
+            <div class="espaciado"></div>
+            <p>No se permitirá ningún tipo de lenguaje ofensivo hacia ningún miembro de la comunidad bajo ningún concepto. Cualquier tipo de falta de respeto OOC, será sancionada gravemente y de manera inmediata por un miembro del Staff.</p>
+            <div class="espaciado"></div>
+            <p>Al entrar al servidor, tu personaje debe tener un nombre y un apellido como mínimo. Queda totalmente prohibido utilizar nombres reconocidos mundialmente como por ejemplo: Cristiano Ronaldo, Dominic Toretto, Paul Walker, etc. (a menos que sea un nombre común).</p>
+            <div class="espaciado"></div>
+            <p><span id="1.1" class="titulos">1.1 </span><span class="titulos">InCharacter (IC)</span></p>
+            <p>InCharacter es todo aquello que le ocurre a nuestro personaje dentro del servidor.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.2" class="titulos">1.2 </span><span class="titulos">OutOfCharacter (OOC)</span></p>
+            <p>Out Of Character es todo lo ajeno que le pueda ocurrir a nuestro personaje <span class="font-bold">DENTRO</span> del servidor. Como por ejemplo una conversación vía Discord sin estar dentro del servidor.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.3" class="titulos">1.3 </span><span class="titulos">Interpretación De Personaje (IDP)</span></p>
+            <p>Se trata de uno de los principios básicos del RolePlay, por IDP siempre deberás actuar como lo haría tu personaje y en consecuencia a tus actos. Para cumplir con esto de la mejor forma posible recomendamos hacerte la historia de tu personaje antes de empezar a rolear con este.</p>
+            <div class="espaciado"></div>
+            <p>Esto consiste en interpretar un personaje y escenificar sus acciones, interactuando con otros jugadores y con el propio entorno. La interpretación de nuestro personaje deberá regirse por una serie de características y hechos. Cualquier cambio en las características psicológicas o en el modo de actuar de nuestro personaje deberá tener una justificación IC y deberá verse reflejado de manera progresiva.</p>
+        </div>
+        <div class="pagina" data-page="2">
+            <p>Siempre deberemos actuar acorde con el rol de nuestro personaje, para esto último es recomendable preguntarse antes de actuar: <span class="font-bold">¿Mi personaje haría esto?</span></p>
+            <div class="espaciado"></div>
+            <p><span class="font-bold">Ejemplo:</span> Si tu personaje tiene miedo a las alturas, siempre deberás tener esto en cuenta. Imagina que te encuentras con un grupo de amigos y uno de ellos propone subir a lo alto de las letras de Vinewood, en este caso tu personaje decidiría no hacerlo o preferiría evitarlo.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.4" class="titulos">1.4 </span><span class="titulos">PowerGaming (PG)</span></p>
+            <p>Entendemos como PowerGaming cualquier acción que sobrepase los límites de la realidad.</p>
+            <p>Es importante no confundir el 'realizar acciones imposibles' con algo que aunque poco probable sí se podría dar en la vida real.</p>
+            <p>También se considera PowerGaming cualquier acción que fuerce una situación de rol o las acciones de otras personas, es decir, no dar oportunidad de interpretación al otro usuario en una situación de rol.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.5" class="titulos">1.5 </span><span class="titulos">MetaGaming (MG)</span></p>
+            <p>Consideramos MetaGaming utilizar cualquier tipo de información OOC de forma IC, o a que las acciones del personaje de un jugador se vean alteradas por conocimientos que tiene el usuario fuera de jugador.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.6" class="titulos">1.6 </span><span class="titulos">DeathMatch (DM)</span></p>
+            <p>Se entiende como DeathMatch, una representación de rol agresivo que implique una agresión a otro usuario sin bases de rol previas que lo justifiquen, sin sentido aparente o con poca argumentación.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.7" class="titulos">1.7 </span><span class="titulos">VehicleDeathMatch (VDM)</span></p>
+            <p>Matar a otro jugador usando un vehículo como arma. Golpear a otro usuario desde un vehículo portando un arma o una patada se considera VDM.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.8" class="titulos">1.8 </span><span class="titulos">RevengeKill (RK)</span></p>
+            <p>Esta norma recuerda a todos los usuarios que si se recibe un PK no se podrá regresar a matar al usuario que terminó con tu vida. En otras palabras, no puedes matar a alguien que te ha matado por venganza OOC.</p>
+        </div>
+        <div class="pagina" data-page="3">
+            <p><span id="1.9" class="titulos">1.9 </span><span class="titulos">BadDriving (BD)</span></p>
+            <p>Este concepto hace referencia a la conducción inadecuada de un vehículo sin respetar la lógica en lo que respecta a la vida misma ni la propia interpretación del personaje. Si van a escapar de las autoridades podrán conducir de manera errática por la adrenalina que acarrea la situación, pero en nuestra vida cotidiana y en el 90% del tiempo vamos a ser unos conductores ejemplares que buscan no llamar la atención, pese a que seamos o no delincuentes.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.10" class="titulos">1.10 </span><span class="titulos">ParcialKill (PK)</span></p>
+            <p>Este concepto hace referencia a la muerte de nuestro personaje dentro de una situación o trama de rol específica, lo que conlleva su desvinculación y la pérdida de memoria de lo acontecido.</p>
+            <p><span class="titulos ml-5">Aclaración:</span></p>
+            <div class="ml-10">
+                <p>En caso de que resultemos heridos de gravedad, tenemos la opción de reducir la gravedad de nuestras heridas en los /do o bien aceptar la muerte de nuestro personaje (Véase <a href="#1.11" class="decoration-0 font-bold">1.11 Character Kill</a>).</p>
+            </div>
+            <div class="espaciado"></div>
+            <p><span id="1.11" class="titulos">1.11 </span><span class="titulos">CharacterKill (CK)</span></p>
+            <p>Se entiende como la muerte total y absoluta de nuestro personaje. Esto impide volver a tener los mismos contactos que poseía anteriormente, al igual que los mismos amigos, familiares, etc. Empiezas totalmente de cero sin conocer absolutamente a nadie. No se podrán dejar herencias a nuestro siguiente personaje.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.12" class="titulos">1.12 </span><span class="titulos">Away From Keyboard (AFK)</span></p>
+            <p>Entendemos por AFK el estar "lejos del teclado", ya sea literalmente o con el juego minimizado para hacer otras cosas. Esta acción atenta contra el rol ya que el usuario que lo comete lo corta de raíz.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.13" class="titulos">1.13 </span><span class="titulos">Uso del me y el do</span></p>
+            <p><span id="1.13.1" class="subtitulos1">1.13.1 Uso del me</span></p>
+            <div class="ml-10">
+                <p>El /me se utiliza para relatar acciones que nuestro personaje no puede hacer utilizando las animaciones predeterminadas dentro del servidor. <span class="font-bold">Ejemplo:</span> /me coge un bolígrafo de la mesa. Lo ideal es ser creativos a la hora de redactar nuestros me, ya que, están describiendo nuestra acción.</p>
+            </div>
+        </div>
+        <div class="pagina" data-page="4">
+            <p><span id="1.13.2" class="subtitulos1">1.13.2 Uso del do</span></p>
+            <div class="ml-10">
+                <p>El /do se puede utilizar para detallar sentimientos que se noten por nuestras expresiones faciales. <span class="font-bold">Ejemplo:</span> /do Se vería a XXX entristecido, podríamos deducir que todos los que nos rodean, pueden percibir el estado de ánimo de nuestro personaje.</p>
+                <div class="espaciado"></div>
+                <p>También se puede utilizar para cosas que los demás jugadores deberían ver y no pueden ver por condiciones del propio juego (es decir, para describir el entorno). <span class="font-bold">Ejemplo:</span> /do se le vería con una puñalada en el estómago. Aunque por condiciones que se darían en la vida real se debería ver que alguien tiene una puñalada no se ve por condiciones del juego, en ese caso se deberá poner en un do.</p>
+                <div class="espaciado"></div>
+                <p>Por último, en caso de querer interactuar con otro usuario, debemos realizar una acción con un me y preguntar con el do. <span class="font-bold">Ejemplo:</span> /me le abraza. /do ¿Podría? La otra persona, debería responder: /do Sí/No.</p>
+            </div>
+            <div class="espaciado"></div>
+            <p><span id="1.14" class="titulos">1.14 </span><span class="titulos">Insultos OOC</span></p>
+            <p>Todo tipo de insultos, faltas de respeto o vejaciones de un usuario hacia otro (de forma OOC), será sancionado gravemente.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.15" class="titulos">1.15 </span><span class="titulos">Forzar el Rol</span></p>
+            <p>Queda totalmente prohibido forzar roles. <span class="font-bold">Ejemplos:</span> ponerse a provocar a la policía para ser perseguido o forzar situaciones que lleven a un rol, acercarse a alguien que no conoces de nada a insultar, etc.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.16" class="titulos">1.16 </span><span class="titulos">Evasión de Rol</span></p>
+            <p>Cuando evitamos rolear de forma intencionada con alguien o cuando nos desconectamos con el fin de evitar el rol se considera evasión de rol. En caso de problemas de internet o desconexión por fuerza mayor se deberá continuar el rol inmediatamente al reconectarse o si no puedes por algún motivo, comunicar el problema por Discord a los miembros del soporte técnico o al jugador con el que estábamos roleando.</p>
+        </div>
+        <div class="pagina">
+            <p><span id="1.17" class="titulos">1.17 </span><span class="titulos">No Parar un Rol</span></p>
+            <p>Si ves algo reportable, continua el rol y una vez terminado, reporta utilizando nuestro sistema de tickets, pero nunca se debe parar un rol para discutir. Para poder reportar una situación de rol se deberá grabar para posteriormente enviarlo a la administración para que el rol pueda ser revisado.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.18" class="titulos">1.18 </span><span class="titulos">Valorar la Vida</span></p>
+            <p>Tienes que valorar la vida de tu personaje como si fuera la vida real. Se podrán realizar roles de suicidio, pero siempre teniendo en cuenta que esto llevará a tu personaje a un CK, previamente al rol de suicidio se deberá abrir un ticket en discord solicitando el CK con los motivos, en caso de ser aceptado se podrá realizar el rol.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.19" class="titulos">1.19 </span><span class="titulos">Rol de entorno </span></p>
+            <p>Es la representación del entorno y las situaciones que lo rodean de manera realista y coherente dentro del juego, es decir, en caso de que veamos o realizemos algo que pueda llamar la atención de algún civil que pueda alertar a las autoridades o servicios médicos, deberemos utilizar el comando /entorno o /auxilio como si un civil fuera el que envia un mensaje de aviso a los medios pertinentes (médicos, policías, etc.). Los entornos se deberán enviar de forma neutral y objetiva en cualquier circunstancia ya que es como si lo enviara otra persona (NPC).</p>
+            <div class="espaciado"></div>
+            <ol class="list-decimal ml-8">
+                <li><span class="font-bold">Aviso de entorno:</span> Cuando ocurren situaciones como robos, agresiones, asesinatos u otros eventos relevantes, los jugadores deben realizar un aviso de entorno simulando la reacción de un civil que pueda ver u oír algo. Este aviso debe ser realizado de manera adecuada y objetiva, describiendo lo que está sucediendo de una forma veraz. (Se debe describir a los perpetradores, el vehículo utilizado, etc. Esto ayuda a mantener una atmósfera realista)</li>
+                <li><span class="font-bold">Asesinatos en interiores:</span> Si un asesinato ocurre dentro de un edificio, el jugador responsable debe realizar el aviso de entorno desde el exterior de la propiedad una vez que la situación ha concluido. Esto es importante para simular la posible reacción de los vecinos ante ruidos o eventos inusuales.</li>
+                <li><span class="font-bold">Lugares para robar:</span> Los robos a personas que están trabajando solo pueden ocurrir en ciertas áreas específicas, siempre y cuando sean zonas más apartadas o menos transitadas, como callejones de barrios marginales, caminos de tierra, aparcamientos, etc.</li>
+            </ol>
+        </div>
+        <div class="pagina">
+            <p>Es fundamental que el aviso de entorno sea objetivo y preciso, proporcionando información relevante sobre lo que está sucediendo en el juego.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.20" class="titulos">1.20 </span><span class="titulos">Retomar roles </span></p>
+            <p>En caso de que hayamos sufrido una caída o desconexión forzosa o fortuita, podremos solicitar a la otra parte retomar el rol bajo unas condiciones lo más similares posibles a las que se dieron en primera instancia. Ambas partes deberán retomar el rol en la misma zona y con los mismos objetos en su posesión.</p>
+            <div class="espaciado"></div>
+            <p><span id="1.21" class="titulos">1.21 </span><span class="titulos">Uso de máscaras </span></p>
+            <p>No se podrá reconocer por la voz si la persona porta una máscara, bandana o similares ocultando su rostro o una parte significativa de este. Solo se podrán tener sospechas, si la persona va con una ropa muy llamativa o característica y se ha tenido rol previo recientemente con esa persona. (Ejemplo: Sudadera Guffy amarillo fluorescente). Alguien puede tener sospechas de quién eres aunque lleves máscara si te ve algún tatuaje y vuelve a ver ese tatuaje de nuevo (cuando no lleves máscara).</p>
+            <div class="espaciado"></div>
+            <p><span id="2" class="titulos">2. </span><span class="titulos">NORMATIVA ESPECÍFICA</span></p>
+            <div class="espaciado"></div>
+            <p>Todas las normas específicas que pueda tener el servidor serán comentadas a partir de este punto.</p>
+            <div class="espaciado"></div>
+            <p><span id="2.1" class="titulos">2.1 </span><span class="titulos">Uso de macros </span></p>
+            <p>Se prohíbe el uso de macros con fines de farmeo o con la intención de mecanizar roles como robar un vehículo, atracar una tienda o usuario, reparar un vehículo o similares para obtener ventaja sobre el resto.</p>
+            <div class="espaciado"></div>
+            <p><span id="2.2" class="titulos">2.2 </span><span class="titulos">Uso de mods o alteraciones del juego </span></p>
+            <p>Queda terminantemente prohibida cualquier modificación de juego (mod) que altere el funcionamiento de este por defecto para conseguir un beneficio o ventaja sobre el resto de jugadores, salvo determinados mods autorizados. Los mods visuales que no incumplan nada de lo dicho anteriormente expuesto se podrán utilizar sin problema alguno.</p>
+        </div>
+        <div class="pagina">
+            <p><span id="2.3" class="titulos">2.3 </span><span class="titulos">Acciones no roleadas </span></p>
+            <p>Cualquier situación que no se rolee adecuadamente (una herida grave no roleada o la reparación de un vehículo, por ejemplo) será duramente sancionada, incluso si fue causada por lag o bugs.</p>
+            <div class="espaciado"></div>
+            <p><span id="2.4" class="titulos">2.4 </span><span class="titulos">Uso de armas </span></p>
+            <ol class="list-decimal ml-8">
+                <li>Para utilizar un arma siempre habrá que tener un rol previo excepto en las zonas controladas por bandas. Siempre que amenaces a alguien con un arma debes darle tiempo suficiente para que pueda cumplir tu petición antes de disparar.</li>
+                <li>El conductor de un vehículo solo podrá disparar cuando el vehículo esté parado (podrá disparar a matar), los demás podrán disparar con el coche en movimiento pero solo a ruedas (siempre teniendo en cuenta la velocidad a la que va el vehículo, no se podrá disparar en caso de que el vehículo supere los 100km/h), para disparar a matar el coche deberá estar parado.</li>
+                <li>Nunca se podrá disparar desde una moto en marcha, con esta parada si se podrá disparar.</li>
+                <li>Toda arma larga que se porte en el inventario es visible ante cualquier usuario, al igual que en la mano. Se podrá rolear que el arma va en una mochila/bolsa/maletín siempre y cuando el arma pueda meterse dentro de esta por dimensiones. Siempre se deberá poder ver dicha mochila/bolsa/maletín.</li>
+                <li>Está permitido abrir fuego desde un helicóptero en el aire siempre y cuando se cumpla la siguiente condición:</li>
+                <ul class="list-disc ml-10">
+                    <li>El tirador debe estar colocado en la parte trasera del helicóptero con las puertas abiertas, el helicóptero deberá estar prácticamente estable y hallarse en paralelo al objetivo.</li>
+                </ul>
+            </ol>
+            <div class="espaciado"></div>
+            <p><span id="2.5" class="titulos">2.5 </span><span class="titulos">Rol de heridas </span></p>
+            <p>Las heridas se rolean después de finalizar el conflicto o una vez caigas en estado de coma, sin posibilidad de continuar moviéndote.</p>
+        </div>
+        <div class="pagina">
+            <p>En caso de finalizar un conflicto y resultar herido deberemos rolear las heridas en primera instancia y con total prioridad pese a que esto nos impida huir o ejecutar cualquier otra acción. También tendremos que considerar que, en caso de tener heridas graves, será un impedimento para hacer ciertas acciones. Según la zona donde haya impactado la bala no se podrán hacer algunas acciones. Ejemplo: Acaba el tiroteo y tienes una bala en el  brazo derecho, no tiene sentido que te pongas a conducir con normalidad.</p>
+            <div class="espaciado"></div>
+            <p>Si quedas gravemente herido (menos de la mitad de la vida) en un tiroteo contra la policía o una banda rival deberás ir al hospital cuanto antes.</p>
+            <div class="espaciado"></div>
+            <p><span id="2.6" class="titulos">2.6 </span><span class="titulos">Aprovecharse de empleos de oposiciones </span></p>
+            <p>Queda totalmente prohibido el hurto y/o extracción de material disponible para los empleos legales oficiales (SAFD, SAPD), la venta de estos o la retirada de dinero de los fondos.</p>
+            <div class="espaciado"></div>
+            <p><span id="2.7" class="titulos">2.7 </span><span class="titulos">Uso de vehículos policiales </span></p>
+            <p>Podrás coger o robar un vehículo de SAPD o SAFD cuando en un rol contra la policía, no tengas opción de escapar, por lo que podrás usarlo como medio de escape, en estos casos deberás enviar /entorno 10-20 patrulla robado cada pocos minutos ya que las patrullas cuentan con localizadores.</p>
+            <div class="espaciado"></div>
+            <p><span id="2.8" class="titulos">2.8 </span><span class="titulos">Uso de vehículos de trabajo </span></p>
+            <p>Una empresa es una red de trabajadores en las que unos supervisan a otros. No se tolerará que un usuario sin vehículo propio use uno de la empresa para ir a satisfacer sus hábitos personales.</p>
+            <div class="espaciado"></div>
+            <p><span id="2.9" class="titulos">2.9 </span><span class="titulos">Llamadas falsas </span></p>
+            <p>Queda prohibido hacer llamadas falsas a todos los servicios (SAPD, SAFD, Mecánicos y Taxistas) y se debe escribir el motivo de la llamada, las llamadas sin texto podrán ser ignoradas.</p>
+            <div class="espaciado"></div>
+            <p><span id="2.10" class="titulos">2.10 </span><span class="titulos">Roles preacordados </span></p>
+            <p>Cualquier rol acordado de antemano entre jugadores para percibir un beneficio económico a través de nuestros sistemas será gravemente sancionado. <span class="font-bold">Ejemplo:</span> Que un conocido tuyo se deje secuestrar para hacer de rehén en un robo, etc.</p>
+        </div>
+        <Redes />
+    </body>
+
+</html>
