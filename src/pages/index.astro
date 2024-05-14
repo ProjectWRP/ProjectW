@@ -3,6 +3,109 @@ import Navbar from '../components/Navbar.astro';
 import Redes from '../components/Redes.astro';
 ---
 <html lang="es">
+<style>
+    .logoServer {
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logoContainer {
+        text-align: center;
+    }
+
+    .logoText {
+        margin-left: .8em;
+        letter-spacing: 1em;
+        font-size: 2em;
+        color: rgb(229, 255, 0);
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        -webkit-text-stroke: .5px black;
+        font-weight: bold;
+    }
+
+    .logoSubtitle {
+        letter-spacing: .3em;
+        font-size: 1em;
+        color: rgb(229, 255, 0);
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        -webkit-text-stroke: .5px black;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    @keyframes beat {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.03);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .animate-beat {
+        animation: beat 1.5s infinite;
+    }
+
+    .logoSubtitle {
+        font-weight: bold;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    @media (max-width: 767px) {
+        .logoServer {
+            min-height: 80vh;
+        }
+
+        .logoText {
+            font-size: 1.5rem;
+        }
+
+        .logoSubtitle {
+            font-size: 0.55rem;
+            margin-top: 0.5rem;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .logoText {
+            font-size: 1.8rem;
+        }
+
+        .logoSubtitle {
+            font-size: 0.8rem;
+        }
+    }
+
+    @media (min-width: 1025px) and (max-width: 1440px) {
+        .logoText {
+            font-size: 2rem;
+        }
+
+        .logoSubtitle {
+            font-size: 0.8rem;
+        }
+    }
+
+    @media (min-width: 1441px) {
+        .logoText {
+            font-size: 2.5rem;
+        }
+
+        .logoSubtitle {
+            font-size: 1.2rem;
+        }
+    }
+</style>
     <head>
         <meta charset="utf-8" />
         <meta name="description" content="Web Oficial de Project W RolePlay" />
@@ -12,7 +115,13 @@ import Redes from '../components/Redes.astro';
     </head>
     <body>
         <Navbar />
-        <h1>test</h1>
+        <div class="flex items-center justify-center logoServer select-none">
+            <div class="logoContainer">
+                <span class="logoText">PROJECT</span>
+                <img class="w-80 animate-beat mx-auto" src="/project-w.svg" alt="Project W Logo">
+                <span class="logoSubtitle">ROLEPLAY SERIO, EXPERIENCIA DE JUEGO AUTÉNTICA</span>
+            </div>
+        </div>
         <Redes />
     </body>
 </html>
