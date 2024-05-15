@@ -7,23 +7,52 @@
     }
 </style>
 
-<a href="https://discord.gg/hrC5Vhr8KB" target="_blank" rel="noopener noreferrer" class="animate-zoom-in select-none">
-    <div class="fixed bottom-8 right-8 shadow-md flex items-center justify-center z-50 rounded-2xl fondoIcono w-10 h-10 hover:scale-105 ">
-        <img class="w-full" src="/discord-logo.png" alt="Discord">
-    </div>
-</a>
-<a href="https://twitter.com/ProjectW_RP" target="_blank" rel="noopener noreferrer" class="animate-zoom-in select-none">
-    <div class="fixed bottom-8 right-20 flex items-center justify-center shadow-md z-50 rounded-2xl fondoIcono w-10 h-10 hover:scale-105 ">
-        <img class="w-10/12" src="/x-logo.png" alt="X">
-    </div>
-</a>
-<a href="https://www.instagram.com/projectw_rp/" target="_blank" rel="noopener noreferrer" class="animate-zoom-in select-none">
-    <div class="fixed bottom-8 right-32 flex items-center justify-center shadow-md z-50 rounded-2xl fondoIcono w-10 h-10 hover:scale-105 ">
-        <img class="w-10/12" src="/instagram-logo.png" alt="Instagram">
-    </div>
-</a>
-<a href="https://www.tiktok.com/@projectw_rp" target="_blank" rel="noopener noreferrer" class="animate-zoom-in select-none">
-    <div class="fixed bottom-8 right-44 flex items-center justify-center shadow-md z-50 rounded-2xl fondoIcono w-10 h-10 hover:scale-105 ">
-        <img class="w-10/12" src="/tiktok-logo.png" alt="TikTok">
-    </div>
-</a>
+<button id="social-menu-toggle" class="animate-zoom-in select-none md:hidden fixed bottom-4 right-4 md:right-8 shadow-md flex items-center justify-center z-50 rounded-2xl fondoIcono w-10 h-10 hover:scale-105">
+    <img class="w-full" src="/social-icon.png" alt="Social">
+</button>
+
+<div id="social-menu" class="hidden md:flex fixed bottom-20 md:bottom-6 right-4 md:right-8 z-50 space-x-4">
+    <a href="https://discord.gg/hrC5Vhr8KB" target="_blank" rel="noopener noreferrer" class="animate-zoom-in select-none">
+        <div class="shadow-md flex items-center justify-center z-50 rounded-2xl fondoIcono w-10 h-10 hover:scale-105 ">
+            <img class="w-full" src="/discord-logo.png" alt="Discord">
+        </div>
+    </a>
+    <a href="https://twitter.com/ProjectW_RP" target="_blank" rel="noopener noreferrer" class="animate-zoom-in select-none">
+        <div class="shadow-md flex items-center justify-center z-50 rounded-2xl fondoIcono w-10 h-10 hover:scale-105 ">
+            <img class="w-10/12" src="/x-logo.png" alt="X">
+        </div>
+    </a>
+    <a href="https://www.instagram.com/projectw_rp/" target="_blank" rel="noopener noreferrer" class="animate-zoom-in select-none">
+        <div class="shadow-md flex items-center justify-center z-50 rounded-2xl fondoIcono w-10 h-10 hover:scale-105 ">
+            <img class="w-10/12" src="/instagram-logo.png" alt="Instagram">
+        </div>
+    </a>
+    <a href="https://www.tiktok.com/@projectw_rp" target="_blank" rel="noopener noreferrer" class="animate-zoom-in select-none">
+        <div class="shadow-md flex items-center justify-center z-50 rounded-2xl fondoIcono w-10 h-10 hover:scale-105 ">
+            <img class="w-10/12" src="/tiktok-logo.png" alt="TikTok">
+        </div>
+    </a>
+</div>
+
+<button id="social-menu-close" class="hidden fixed bottom-4 right-4 md:right-8 z-50 animate-zoom-in select-none">
+    <img class="shadow-md flex items-center justify-center z-50 rounded-2xl fondoIcono w-10 h-10 hover:scale-105" src="/close-icon.png" alt="Close">
+</button>
+
+<script>
+    const socialMenuToggle = document.getElementById('social-menu-toggle');
+    const socialMenu = document.getElementById('social-menu');
+    const socialMenuClose = document.getElementById('social-menu-close');
+
+    socialMenuToggle.addEventListener('click', function() {
+        socialMenu.classList.toggle('hidden');
+        socialMenuClose.classList.toggle('hidden');
+    });
+
+    socialMenuClose.addEventListener('click', function() {
+        socialMenu.classList.add('hidden');
+        socialMenuClose.classList.add('hidden');
+    });
+</script>
+
+
+

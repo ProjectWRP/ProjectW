@@ -31,8 +31,6 @@ import Redes from '../components/Redes.astro';
         letter-spacing: .3em;
         font-size: 1em;
         color: rgb(229, 255, 0);
-        position: relative;
-        overflow: hidden;
         white-space: nowrap;
         -webkit-text-stroke: .5px black;
         font-weight: bold;
@@ -63,7 +61,7 @@ import Redes from '../components/Redes.astro';
 
     @media (max-width: 767px) {
         .logoServer {
-            min-height: 80vh;
+            min-height: 70vh;
         }
 
         .logoText {
@@ -71,7 +69,7 @@ import Redes from '../components/Redes.astro';
         }
 
         .logoSubtitle {
-            font-size: 0.55rem;
+            font-size: 0.58rem;
             margin-top: 0.5rem;
         }
     }
@@ -112,14 +110,27 @@ import Redes from '../components/Redes.astro';
         <link rel="icon" type="image/svg+xml" href="/project-w.svg" />
         <meta name="viewport" content="width=device-width" />
         <title>Project W</title>
+        <script>
+            document.getElementById("conectar-btn").addEventListener("click", function() {
+                window.open('fivem://connect/localhost');
+            });
+        </script>
     </head>
     <body>
         <Navbar />
-        <div class="flex items-center justify-center logoServer select-none animate-bounce-fade-in animate-duration-1000">
+        <div class="flex mt-12 md:mt-5 items-center justify-center logoServer select-none animate-bounce-fade-in animate-duration-1000">
             <div class="logoContainer">
                 <span class="logoText">PROJECT</span>
                 <img class="w-80 animate-beat mx-auto" src="/project-w.svg" alt="Project W Logo">
                 <span class="logoSubtitle">ROLEPLAY SERIO, EXPERIENCIA DE JUEGO AUTÉNTICA</span>
+                <div class="m-auto flex mt-10 items-center justify-center flex-wrap">
+                    <a class="tracking-widest text-xs text-yellow-500 font-bold stroke-[5px] stroke-[#000000] -mt-4 md:mt-5 hover:underline" href="/normativa">NORMATIVA</a>
+                    <span class="hidden md:flex tracking-widest text-2xl text-yellow-500 font-bold stroke-[5px] stroke-[#000000] ml-10 mr-10 mt-2">|</span>
+                    <button class="hidden md:flex ml-10 mt-4 mr-10 bg-orange-600 text-white rounded-2xl font-bold border-yellow-300 p-4 hover:scale-105 hover:shadow-[0_0_35px_-13px_rgba(229,255,0,1)]" id="conectar-btn"><img class="max-w-5 mr-1 drop-shadow-[1px_1px_0_rgba(0,0,0,1)] hover:drop-shadow-[3px_3px_0_rgba(0,0,0,1)]" src="/fivem-logo.svg" alt="FiveM Logo"> CONECTAR AL SERVIDOR</button>
+                    <span class="hidden md:flex tracking-widest text-2xl text-yellow-500 font-bold stroke-[5px] stroke-[#000000] ml-10 mr-10 mt-2">|</span>
+                    <span class="flex-wrap md:hidden w-full text-center my-2"> <br> </span>
+                    <a class="tracking-widest text-xs text-yellow-500 font-bold stroke-[5px] stroke-[#000000] -mt-4 md:mt-5 hover:underline" href="/normativa">CONTACTO</a>
+                </div>
             </div>
         </div>
         <Redes />
