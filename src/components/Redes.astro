@@ -43,15 +43,17 @@
     const socialMenu = document.getElementById('social-menu');
     const socialMenuClose = document.getElementById('social-menu-close');
 
-    socialMenuToggle.addEventListener('click', function() {
-        socialMenu.classList.toggle('hidden');
-        socialMenuClose.classList.toggle('hidden');
-    });
+    if (socialMenuToggle && socialMenu && socialMenuClose) {
+        socialMenuToggle.addEventListener('click', function() {
+            socialMenu.classList.toggle('hidden');
+            socialMenuClose.classList.toggle('hidden');
+        });
 
-    socialMenuClose.addEventListener('click', function() {
-        socialMenu.classList.add('hidden');
-        socialMenuClose.classList.add('hidden');
-    });
+        socialMenuClose.addEventListener('click', function() {
+            socialMenu.classList.add('hidden');
+            socialMenuClose.classList.add('hidden');
+        });
+    }
 </script>
 
 
