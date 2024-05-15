@@ -111,9 +111,12 @@ import Redes from '../components/Redes.astro';
         <meta name="viewport" content="width=device-width" />
         <title>Project W</title>
         <script>
-            document.getElementById("conectar-btn").addEventListener("click", function() {
-                window.open('fivem://connect/localhost');
-            });
+            const conectarBtn = document.getElementById("conectar-btn");
+            if (conectarBtn) {
+                conectarBtn.addEventListener("click", function() {
+                    window.open('fivem://connect/localhost');
+                });
+            }
         </script>
     </head>
     <body>
